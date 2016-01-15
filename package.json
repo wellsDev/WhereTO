@@ -1,0 +1,25 @@
+{
+  "name": "whereto-design-to-page",
+  "version": "0.0.1",
+  "description": "Dribble design to Dev",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellsDev/WhereTO.git"
+  },
+  "author": "Charlie Wells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wellsDev/WhereTO/issues"
+  },
+  "homepage": "https://github.com/wellsDev/WhereTO#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0",
+    "gulp-install": "^0.6.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
