@@ -18,6 +18,7 @@ body {
     ), url("https://images.unsplash.com/photo-1429979787503-f2d7d20550c8?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1450");
   background-position: center center;
   background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -53,6 +54,7 @@ body:before {
   background-position: center top;
   border-radius: 10px 10px 0px 0px;
   position: relative;
+  overflow: hidden;
 }
 
 .search {
@@ -91,30 +93,51 @@ p.currentLocation {
   text-transform: uppercase;
 }
 
-.latestLocations {
+#latestLocations {
   position: absolute;
   width: 250px;
   background-color: #75C960;
   height: 45px;
   border-radius: 20px 0px 0px 20px;
   top: 380px;
-  right: 0px;
-  padding-bottom: 18px;
+  margin: 0px;
 }
 
 .latestTitle {
   text-transform: uppercase;
   color: #fff;
-  margin-left: 30px;
+  padding-top: 14px;
+  padding-left: 20px;
+}
+
+p.latestTitle::before {
+  content: '\f067';
+  padding-right: 30px;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration:none;
+}
+
+.latestExpand {
+  right: 0px;
+}
+
+.latestOpen {
+  right: -200px;
+}
+
+.latestExpand::before {
+  content: '';
 }
 
 .latestTitle::after {
   content: '\f278';
-   font-family: FontAwesome;
-   font-weight: normal;
-   font-style: normal;
-   margin:0px 0px 0px 10px;
-   text-decoration:none;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  margin:0px 0px 0px 10px;
+  text-decoration:none;
 }
 
 input:focus {outline:none;}
@@ -139,25 +162,23 @@ input {
   height: 50px;
   background: none;
   display: inline-block;
-  position: absolute;
-  bottom: 0px;
+  width: 200px;
+  margin-top: 450px;
+  float: left;
+}
+
+.nav1 {
+  border-bottom: 8px solid #F3C651;
+}
+.nav2 {
+  border-bottom: 8px solid #9BA5EB;
+}
+.nav3 {
+  border-bottom: 8px solid #65CFE5;
 }
 
 .nav:hover p {
   color: #E7E8E7;
-}
-
-.nav1 {
-  left:0px;
-  border-bottom: 7px solid #F3C651;
-}
-.nav2 {
-  left: 16.66%;
-  border-bottom: 7px solid #9BA5EB;
-}
-.nav3 {
-  left: 33.332%;
-  border-bottom: 7px solid #65CFE5;
 }
 
 .coreNav p {
@@ -271,8 +292,14 @@ p.gallery::before {
   width: 50%;
   display: inline-block;
   float: left;
-  padding-left: 25px;
 }
+
+.todayWeather {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
 
 .todayWeather i {
   font-size: 5rem;
@@ -356,8 +383,15 @@ p.gallery::before {
   }
 
 }
-@media (max-width: 1250px){
-  .nav p{
-    font-size: .5em;
+@media (max-width: 950px){
+  .nav {
+    width: 33.333%;
+    margin-top: 450px;
+    float: left;
+  }
+
+  .col-1 {
+    width: 33.333%;
+    display: inline-block;
   }
 }
